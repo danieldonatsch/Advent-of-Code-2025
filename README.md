@@ -27,3 +27,20 @@ Second, we need to see if we passed once zero, since last time.
 We can do this by comparing to the previous location and consider if turned left or right.
 
 ## Day 2
+
+Earning the fist star is done by finding numbers in given ranges, which consist of two same substrings.
+E.g. is 123123 which consists of 2x 123.
+We can find them bey checking the number of digits of the lower end of the range.
+Using it's first half of digits and start checking this, and then incrementing it by one, 
+until the concatenation of it with itself exceeds the upper bound of the range.
+/
+The second gold star is earned by finding all numbers which consist of repeated "substrings".
+E.g. 121212 consists of 3x 12, 222222 consists of 6x 2, 3x 22 and 2x 222.
+Second example is the tricky one, we don't want to count it multiple times, so wee keep track on found numbers.
+Besides that, we start with 1, see if n-times 1 is in the range, then increment it by one.
+If n-times the pattern exceeds the upper bound of the range, we decrement n by one and keep searching until n < 2.
+
+## Day 2
+
+Wait for tomorrow. :-)
+

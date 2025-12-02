@@ -7,12 +7,14 @@ from run import get_advent_of_code_solution
 # Dict key is the day, first solution for star 1, second for star 2
 sample_solutions = {
     1: (3, 6),
+    2: (1227775554, 4174379265)
 }
 
 # Solution for samples.
 # Dict key is the day, first solution for star 1, second for star 2
 puzzle_solutions = {
     1: (1089, 6530),
+    2: (64215794229, 85513235135)
 }
 
 
@@ -47,4 +49,4 @@ if __name__ == '__main__':
     t0 = time.time()
     run_all_tests(example=True)
 
-    print("\nRunning all Advent of Code 2024 puzzles took", round(time.time() - t0, 4), "seconds")
+    print("\nRunning all Advent of Code 2025 puzzles took", round(time.time() - t0, 4), "seconds")
