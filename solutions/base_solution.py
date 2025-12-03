@@ -20,6 +20,11 @@ class BaseSolution:
         return f"input/day{self.solution_day:02d}_example.txt" if self.is_example \
             else f"input/day{self.solution_day:02d}.txt"
 
+    @staticmethod
+    def file_reader(file_path):
+        for line in open(file_path, "r"):
+            yield line.strip()
+
     def star_1(self):
         start_time = time.time()
         print(f"*  Collect first star on December {self.solution_day}, 2025...")
