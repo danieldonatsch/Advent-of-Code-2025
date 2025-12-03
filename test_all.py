@@ -7,14 +7,16 @@ from run import get_advent_of_code_solution
 # Dict key is the day, first solution for star 1, second for star 2
 sample_solutions = {
     1: (3, 6),
-    2: (1227775554, 4174379265)
+    2: (1227775554, 4174379265),
+    3: (357, 3121910778619),
 }
 
 # Solution for samples.
 # Dict key is the day, first solution for star 1, second for star 2
 puzzle_solutions = {
     1: (1089, 6530),
-    2: (64215794229, 85513235135)
+    2: (64215794229, 85513235135),
+    3: (17278, 171528556468625)
 }
 
 

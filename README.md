@@ -40,7 +40,28 @@ Second example is the tricky one, we don't want to count it multiple times, so w
 Besides that, we start with 1, see if n-times 1 is in the range, then increment it by one.
 If n-times the pattern exceeds the upper bound of the range, we decrement n by one and keep searching until n < 2.
 
-## Day 2
+## Day 3
+
+We got a series of digits (numbers 0 to 9).
+The task was to find the two digits, which form the max.
+Re-arranging isn't allowed.
+We have two variables for the two digits we keep: `first_digit`, `second_digit`.
+Then, we iterate over all available digits except of the last one.
+We check, if the current digit is larger than the first one.
+If so, we save the current digit in `first_digit` and set `second_digit = -1`.
+Otherwise, we check if the current digit increases the second one.
+If so, we save the current digit as the `second_digit`.
+Otherwise, we move on.
+At the end, we compare the last available digit to `second_digit`.
+/
+Now we wanted to find the twelve digits, which form the largest number.
+We do the same as with two, but keep now an array of twelve digits, instead of two variables.
+The game stays the same.
+The only tricky thing is, how to manage the last twelve digits.
+We need to make sure, that we do not use e.g. the third last digit of all available ones as our 8th used digit.
+Because then, we would have only two digits left in the available ones but need to fill four blank spots in the used digits.
+So, make sure you set the upper bound of the loop correct!
+
+## Day 4
 
 Wait for tomorrow. :-)
-
