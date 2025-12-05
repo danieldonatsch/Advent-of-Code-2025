@@ -64,4 +64,32 @@ So, make sure you set the upper bound of the loop correct!
 
 ## Day 4
 
-Wait for tomorrow. :-)
+Given is a grid, where each grid cell has either a . or an @.
+Cells with an @ can be turned to . if it has max 3 neighbour cells containing an @.
+To figure out how many cells can be "flipped" we need to go once through the grid and check every cell.
+It the cell has already a . go to the next one.
+Otherwise, check all its eight neighbours and count the @.
+If four are found, go to the next cell.
+If all neighbours are checked and max @ are found, count this sell as "flippable".
+/
+In the second puzzle we did basically the same with the only difference, that we could go over the grid several times.
+So, we actually needed to flip the "flippable" cells and go over the grid again and again, until no more cell could be flipped.
+
+## Day 5
+
+Given where (potentially) overlapping intervals and numbers.
+The first gold star was earned by simply checking how many of the numbers where in one of the intervals.
+This can be done simply by holding a list of all intervals and then checking each number against each interval until a hit or the end of the interval-list.
+It is not the most efficient way of doing it, but sufficient.
+/
+Second question was, how many numbers in total are covered by the intervals.
+To figure this out, we need to make sure, intervals are not overlapping.
+Taking the list from part 1 and sorting it by the interval start points is the first step.
+Then we go through the first sorted list, check for each interval, if it overlaps with the previous one.
+If so, the end point of the previous interval is moved forward to the current interval and the current interval can be dropped.
+Then, a second pass through the intervals is needed.
+Compute for each interval end point minus starting point plus one to get the number of numbers it covers.
+Sum this numbers.
+
+## Day 6
+
