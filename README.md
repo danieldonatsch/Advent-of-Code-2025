@@ -19,7 +19,7 @@ The instruction says either left or right and for how many steps.
 To earn the first start, we needed to count after how many instructions we stop at 0.
 My solution is straight forward: Apply the instructions, apply modulo 100 and check if the result is 0.
 Then count it (or not).
-/
+\
 The second start is earned by figuring out, how often we pass 0, no matter if it is at the end of an instruction or not.
 First, we need to count if we move 100 or more steps.
 If so, we pass 0 guaranteed (since 100 step is one full wheel rotation).
@@ -33,7 +33,7 @@ E.g. is 123123 which consists of 2x 123.
 We can find them bey checking the number of digits of the lower end of the range.
 Using it's first half of digits and start checking this, and then incrementing it by one, 
 until the concatenation of it with itself exceeds the upper bound of the range.
-/
+\
 The second gold star is earned by finding all numbers which consist of repeated "substrings".
 E.g. 121212 consists of 3x 12, 222222 consists of 6x 2, 3x 22 and 2x 222.
 Second example is the tricky one, we don't want to count it multiple times, so wee keep track on found numbers.
@@ -53,7 +53,7 @@ Otherwise, we check if the current digit increases the second one.
 If so, we save the current digit as the `second_digit`.
 Otherwise, we move on.
 At the end, we compare the last available digit to `second_digit`.
-/
+\
 Now we wanted to find the twelve digits, which form the largest number.
 We do the same as with two, but keep now an array of twelve digits, instead of two variables.
 The game stays the same.
@@ -71,7 +71,7 @@ It the cell has already a . go to the next one.
 Otherwise, check all its eight neighbours and count the @.
 If four are found, go to the next cell.
 If all neighbours are checked and max @ are found, count this sell as "flippable".
-/
+\
 In the second puzzle we did basically the same with the only difference, that we could go over the grid several times.
 So, we actually needed to flip the "flippable" cells and go over the grid again and again, until no more cell could be flipped.
 
@@ -81,7 +81,7 @@ Given where (potentially) overlapping intervals and numbers.
 The first gold star was earned by simply checking how many of the numbers where in one of the intervals.
 This can be done simply by holding a list of all intervals and then checking each number against each interval until a hit or the end of the interval-list.
 It is not the most efficient way of doing it, but sufficient.
-/
+\
 Second question was, how many numbers in total are covered by the intervals.
 To figure this out, we need to make sure, intervals are not overlapping.
 Taking the list from part 1 and sorting it by the interval start points is the first step.
@@ -92,4 +92,59 @@ Compute for each interval end point minus starting point plus one to get the num
 Sum this numbers.
 
 ## Day 6
+
+.
+\
+.
+
+
+## Day 7
+
+The goal was to follow a beam through a space.
+Each time, the beam hits a splitter, it splits and two beams go from there.
+To figure out, how often the beam split we can use a BFS:
+Check on every "row" of the space where splitters are and check, if they are hit by a beam.
+To do so, we keep track with a set, on which positions currently beams are.
+\
+The second gold star was earned by figuring out, how many possible path exists.
+This is done in BFS manner, too.
+Now we maintain a dict which keeps track of the current beam location and counts the possible path to that location.
+We again go row by row through the space.
+But this time we check all beam locations.
+If a beam location hits a splitter, the beam stops at this location, but it continues on both of its neighbours.
+Update the dict accordingly, but make sure to not over-write existing values.
+
+## Day 8
+
+.
+\
+.
+
+
+## Day 9
+
+.
+\
+.
+
+
+## Day 10
+
+.
+\
+.
+
+
+## Day 11
+
+.
+\
+.
+
+
+## Day 12
+
+.
+\
+.
 
