@@ -116,9 +116,21 @@ Update the dict accordingly, but make sure to not over-write existing values.
 
 ## Day 8
 
-.
+We have some three-dimensional points, and we look for the closest connections between them.
+We compute this and save them in a list.
+It's an O(n^2) operation, but probably nothing faster is possible.
+Then we sort it (O(n log(n))) according to the distance.
+Now we can build the circuits in a greedy manner:
+We connect the closest two nodes, then we check to which two existing circuits these two nodes belong.
+This is a search through all circuits.
+If the circuits are stored in a list of sets, it's an operation linear in the length of the list.
+We unify the two sets.
 \
-.
+The first gold star is earned by connecting the 1000 closest distances.
+So, we do the above described process 1000 times.
+\
+The second gold star is earned by finding the connection which finally puts all nodes into one circle.
+So, we repeat the process, until the list of circuits has length one.
 
 
 ## Day 9
