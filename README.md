@@ -142,7 +142,11 @@ So, we repeat the process, until the list of circuits has length one.
 
 ## Day 10
 
-.
+The first gold star can be earned by implementing breath first search with some optimisation.
+In my case, I converted the state of the indicator lights as well as the buttons as binary strings.
+These I convert into integers, which reduces the memory usage.
+Further, the update can be done with an XOR.
+To make sure, the same state isn't checked several times, the list of light states is a set.
 \
 .
 
