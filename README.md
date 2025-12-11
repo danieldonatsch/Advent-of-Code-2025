@@ -153,10 +153,13 @@ To make sure, the same state isn't checked several times, the list of light stat
 
 ## Day 11
 
-.
+Both gold stars could be earned by finding and counting path through a graph.
+In both cases, a depth first search (dfs) method leaded to the correct result.
+Since the graph can be quite large, it is very helpful to use caching and make sure, no node is visited more than once.
 \
-.
-
+For the second gold star, there was an additional constraint to the path.
+Only paths, which pass through specific nodes counted.
+So, we need to track this with two boolean variables which we pass through the dfs.
 
 ## Day 12
 
