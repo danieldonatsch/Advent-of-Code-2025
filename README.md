@@ -135,10 +135,21 @@ So, we repeat the process, until the list of circuits has length one.
 
 ## Day 9
 
-.
+Some 2D points where given and the task was to find the largest rectangle where a rectangle is defined by two points.
+The solution was simple, just try out every possible combination of two points, compute the area and keep the max.
 \
-.
-
+The given 2D points actually form a polygon.
+Now, the task was, to find the largest rectangle,
+which fits entirely into the polygon and is formed by two polygon corners.
+I tried many different things and decided in the end for a visual solution!
+After displaying it (see image), it became clear, 
+that the largest rectangle needed to share one of two specific polygon corners.
+So, I filtered out all rectangles, which did not include at least one of these two corners.
+Further, it was also clear, that the other corner of the rectangle had to be above or below the specific corner.
+So, I filtered out these as well.
+The rectangles I was left with, I sorted from largest area to smallest.
+Then, I visually stepped through all of them...
+![The matplitlib-figure with the UI to step through all rectangles showing the final solution](images/day9_star2.png)
 
 ## Day 10
 

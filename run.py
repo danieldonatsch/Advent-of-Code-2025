@@ -12,7 +12,7 @@ def get_advent_of_code_solution(day: int, is_example, verbose=False):
     return solution_class(day, is_example, verbose)
 
 
-def main(day: int, is_example=False) -> None:
+def main(day: int, is_example=False, verbose=True) -> None:
     """Runs the solution for the given day, either with the example input or the "real" one
 
     :param day: (int) 1 to 12
@@ -20,7 +20,7 @@ def main(day: int, is_example=False) -> None:
     :return: None
     """
 
-    solution = get_advent_of_code_solution(day=day, is_example=is_example, verbose=True)
+    solution = get_advent_of_code_solution(day=day, is_example=is_example, verbose=verbose)
     print(" ")
     solution.star_1()
     print(" ")
